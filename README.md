@@ -15,7 +15,7 @@
 - has_many :messages
 - has_many :comments
 - has_many :room_users
-- has_many :rooms, through: room_users
+- has_many :rooms, through: :room_users
 
 ## targets テーブル
 
@@ -38,7 +38,7 @@
 | title  | string     | null: false |
 
 - has_many :room_users
-- has_many :users, through: room_users
+- has_many :users, through: :room_users
 - has_many :messages
 
 ## room_users　テーブル
