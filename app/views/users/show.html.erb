@@ -1,0 +1,59 @@
+<%= render "template/header"%>
+<div class="user_main_info">
+  <p class="imag-t">プロフィール写真</p>
+  <%= image_tag @user.image, class: "u-show-img"%>
+  <div class="u-s-n">
+  ユーザー名
+    <%= @user.name%>
+  </div>
+  <div class="u-s-a">
+  年齢
+    <%= @user.age%>
+  </div>
+  <div class="u-s-o">
+  職業
+    <%= @user.occupation%>
+  </div>
+  <% if user_signed_in?%>
+  <% if @user.target.present?%>
+  <div class="target-w">
+    <%= link_to '目標編集', edit_target_path(@user.id), class: "mokuhyou"%>
+     <% else%>
+    <%= link_to '目標を設定しましょう', new_target_path, class: "new-tar"%>
+  </div>
+  <% end %>
+  <% end %>
+
+  <% if @user.target.present?%>
+  <div class="u-t">
+    <div class="t-w-t">
+    今週の目標
+    </div>
+    <div class="u-t-w">
+      <%= @user.target.week%>
+    </div>
+
+    <div class="t-w-t">
+    3日間の目標
+    </div>
+    <div class="u-t-d">
+      <%= @user.target.day%>
+    </div>
+
+    <div class="t-w-t">
+    使用金額
+    </div>
+    <div class="u-t-m">
+      ¥<%= @user.target.money%>
+    </div>
+
+    <div class="t-w-t">
+    自身の気持ち・一言
+    </div>
+    <div class="u-t-f">
+      <%= @user.target.free%>
+    </div>
+  </div>
+  <% end%>
+</div>
+ 

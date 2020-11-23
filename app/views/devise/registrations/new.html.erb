@@ -1,0 +1,52 @@
+<h2 class="sinkititle" >新規登録</h2>
+<div class="sinki-content">
+<%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="main-sinki">
+  <div class="click-upload">
+        <p>
+          顔写真を選択してください
+        </p>
+        <%= f.file_field :image, id:"user-image" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name, "名前" %><br />
+    <%= f.text_area :name, class:"input-default", id:"name", placeholder:"ニックネームでも構いません", maxlength:"40" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, "メールアドレス" %><br />
+    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+  </div>
+ 
+  <div class="field">
+    <%= f.label :password, "パスワード" %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %>文字以内)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, "確認用パスワード" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age, "年齢" %><br />
+    <%= f.text_area :age, class:"input-default", id:"age" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :occupation, "職業" %><br />
+    <%= f.text_area :occupation, class:"input-default", placeholder:"(例) 会社員", id:"occupation" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+</div>
+<%= render "devise/shared/links" %>
+</div>

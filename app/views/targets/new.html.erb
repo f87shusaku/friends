@@ -1,0 +1,36 @@
+<%= render "template/header"%>
+
+
+
+<div class='main-target'>
+  <div class="target-content">
+    <%= form_with model: @target, local: true do |f| %> 
+      <div class="week">
+      <div class="weekt">1週間の目標を決めましょう</div>
+        <%= f.text_area :week, class: "weekf" %>
+      </div>
+
+      <div class="day">
+      
+      <div class="dayt">3日間の目標を決めましょう</div>
+        <%= f.text_area :day, class: "dayf" %>
+      </div>
+
+      <div class="money">
+      <div class="moneyt">
+        週間でギャンブルに使用する金額を決めましょう
+      </div>
+        <%= f.text_area :money, class: "moneyf" %>
+      </div>
+
+      <div class="free">
+      <div class="freet">自身の気持ちを投稿しましょう<br>(どんな気持ちでも構いません)</div>
+        <%= f.text_area :free, size: "200x200", class: "freef" %>
+      </div>
+
+      <div class="target-btn">
+        <%= f.submit "目標決定" ,class:"t-btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>

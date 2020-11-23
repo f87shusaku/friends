@@ -1,0 +1,46 @@
+
+<%= render "template/header"%>
+<%= image_tag "test.jpg", class: "main-image" %>
+<div class="top">
+  <div class="head-massage">
+  パチンコを辞められずに苦しむあなたへ
+  </div>
+  <div class="top-message">
+  何かを克服したい時、何かに向かって努力する時、人間という生き物は一人ではがんばりきることができません。
+  </div>
+  <% @user.each do |user|%>
+  <div class="user-name">
+    <%= link_to user.name, user_path(user.id), class: "user-name"%>
+    さん
+  </div>
+    <div class="user-profile">
+      <div class="user-image">
+        <%= image_tag user.image, size: '170x170', class: "user-image" %>
+      </div>
+      <div class="user-info">
+        <div class="user-tw">
+          週間目標・・・
+          <%= user.target.week%>
+        </div>
+        <div class="user-td">
+          3日間の目標・・・
+          <%= user.target.day%>
+        </div>
+        <div class="user-tm">
+          使用金額・・・ ¥
+          <%= user.target.money%>
+        </div>
+        
+        <div class="user-age">
+          年齢
+          <%= user.age %>歳
+        </div>
+        <div class="user-occupation">
+          職業
+          <%= user.occupation %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= render "template/footer" %>
