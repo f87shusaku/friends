@@ -7,6 +7,20 @@
   position: relative;
 }
 
+.index-content{
+  position: absolute;
+  right: 30px;
+  background-color: yellow;
+  font-size: 25px;
+  width: 250px;
+  height: 70vh;
+}
+
+.room {
+  text-decoration: none;
+  color: red;
+}
+
 .head-massage{
   position: absolute;
   left: 280px;

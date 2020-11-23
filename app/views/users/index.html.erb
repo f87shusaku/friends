@@ -8,6 +8,9 @@
   <div class="top-message">
   何かを克服したい時、何かに向かって努力する時、人間という生き物は一人ではがんばりきることができません。
   </div>
+  <div class="index-content">
+    <%=link_to "掲示板一覧", class: "room"%>
+  </div>
   <% @user.each do |user|%>
   <div class="user-name">
     <%= link_to user.name, user_path(user.id), class: "user-name"%>
@@ -30,7 +33,6 @@
           使用金額・・・ ¥
           <%= user.target.money%>
         </div>
-        
         <div class="user-age">
           年齢
           <%= user.age %>歳
