@@ -1,0 +1,75 @@
+.main-image {
+  width: 100%;
+  height: 70vh;
+}
+
+.top{
+  position: relative;
+}
+
+.head-massage{
+  position: absolute;
+  left: 280px;
+  font-size: 50px;
+  bottom: 1200px;
+}
+
+.top-message{
+  font-size: 50px;
+  padding: 30px;
+}
+
+.user-name {
+  margin-left: 16px;
+  font-size: 30px;
+  color: green;
+  text-decoration: none;
+} 
+
+
+
+.user-profile {
+  display: flex;
+  width: 1100px;
+  align-items: center;
+  margin: 20px 30px 80px 30px;
+  justify-content: left;
+  position: relative;
+  background-color: grey;
+  padding: 10px;
+}
+
+
+.user-age {
+  font-size: 30px;
+  position: absolute;
+  right: 40px;
+  bottom: 50px;
+}
+
+.user-occupation {
+  font-size: 30px;
+  right: 10px;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
+.user-tw{
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+}
+
+.user-td{
+  font-size: 30px;
+  position: absolute;
+  top: 80px;
+}
+
+.user-tm{
+  font-size: 30px;
+  position: absolute;
+  top: 150px;
+}
+

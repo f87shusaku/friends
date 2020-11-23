@@ -1,0 +1,49 @@
+.nav {
+  padding: 20px;
+  background-color: green;
+}
+.lists-right {
+  display: flex;
+  position: relative;
+}
+
+.room-name {
+  font-size: 38px;
+  text-decoration: none;
+  color: white;
+
+}
+
+.login-name{
+  color: white;
+  position: absolute;
+  font-size: 25px;
+  top: 5px;
+  right: 200px;
+  text-decoration: none;
+}
+
+.login {
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  right: 200px;
+}
+
+.sign-up {
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  right: 50px;
+}
+
+.logout{
+  color: white;
+  position: absolute;
+  text-decoration: none;
+  right: 20px;
+  top: 5px;
+  font-size: 25px;
+}

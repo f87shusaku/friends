@@ -1,0 +1,75 @@
+.login-image {
+  width: 100%;
+  height: 100vh;
+}
+
+.h2 {
+  font-size: 10px;
+}
+.main-login {
+  position: relative;
+}
+
+.message {
+  font-size: 30px;
+  position: absolute;
+  left: 20px;
+  top: 30px;
+}
+
+
+.field1 {
+  position: absolute;
+  right: 200px;
+  bottom: 170px;
+  font-size: 20px;
+  color: white;
+}
+
+ .field2 {
+  position: absolute;
+  right: 200px;
+  bottom: 100px;
+  font-size: 20px;
+  color: white;
+}
+
+.field3 {
+  position: absolute;
+  right: 200px;
+  bottom: 80px;
+  color: white;
+}
+
+.login-btn {
+  position: absolute;
+  right: 200px;
+  bottom: 40px;
+} 
+
+.login-content{
+  background-color: grey;
+}
+
+.devise {
+  position: relative;
+}
+
+.sinki {
+  position: absolute;
+  top: 10px;
+  right: 195px;
+  font-size: 20px;
+  text-decoration: none;
+  color: green;
+}
+
+.pass {
+  position: absolute;
+  top: 40px;
+  right: 88px;
+  font-size: 20px;
+  text-decoration: none;
+  color: green;
+  margin: 10px;
+}

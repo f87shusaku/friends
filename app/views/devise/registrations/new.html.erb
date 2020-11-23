@@ -1,7 +1,14 @@
-<h2>新規登録</h2>
-
+<h2 class="sinkititle" >新規登録</h2>
+<div class="sinki-content">
 <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+<div class="main-sinki">
+  <div class="click-upload">
+        <p>
+          顔写真を選択してください
+        </p>
+        <%= f.file_field :image, id:"user-image" %>
+  </div>
 
   <div class="field">
     <%= f.label :name, "名前" %><br />
@@ -40,5 +47,6 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-
+</div>
 <%= render "devise/shared/links" %>
+</div>

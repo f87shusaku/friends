@@ -8,6 +8,7 @@ class User < ApplicationRecord
     validates :name
     validates :occupation
     validates :age
+    validates :image
   end
 
   has_one :target
@@ -15,4 +16,5 @@ class User < ApplicationRecord
   has_many :comments
   has_many :room_users
   has_many :rooms, through: :room_users
+  has_one_attached :image
 end
